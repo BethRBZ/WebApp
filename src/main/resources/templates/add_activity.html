@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавьте новое мероприятие</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <header th:insert="blocks/header :: header"> </header>
+    <h5> Добавьте мероприятие на сайт</h5>
+    <form th:action="@{/add_activity}" method="post">
+
+        <div><label> Название: <input type="text" name="title" width="150" /> </label><br></div>
+        <div><label> Место: <input type="text" name="place"/> </label><br></div>
+        <div><label> Адрес: <input type="text" name="address"/> </label><br></div>
+        <div><label> Описание: <input type="text" name="description"/> </label><br></div>
+        <div><label> Дата и время: <input type="text" name="datetime" width="150" /> </label><br></div>
+        <div><input type="submit" value="Добавить мероприятие"/></div>
+    </form>
+    <h6> После нажатия на кнопку мероприятие появится в разделе "Расписание мероприятий" </h6>
+</body>
